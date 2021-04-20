@@ -8,7 +8,10 @@
 #
 # Modified by "Warren Turkal" <wt@signalfuse.com>, "Volodymyr Zhabiuk" <vzhabiuk@signalfx.com>
 
-import cStringIO as StringIO
+try:
+    import cStringIO as StringIO
+except ImportError:
+    from io import StringIO
 import socket
 import csv
 import pprint
